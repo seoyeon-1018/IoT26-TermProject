@@ -1,0 +1,7 @@
+flask
+ultralytics
+opencv-python
+RPLCD
+smbus2
+dht11
+numpy

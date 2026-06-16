@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AIoT Smart Recycling System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="header">
+            <h1>AIoT Smart Recycling System</h1>
+            <p>Raspberry Pi + YOLO + PIR + DHT11 + LCD</p>
+        </section>
+
+        <section class="content">
+            <div class="video-card">
+                <h2>Live Camera</h2>
+                <img src="{{ url_for('video_feed') }}" alt="Live camera stream">
+            </div>
+
+            <div class="result-card">
+                <h2>Detection Result</h2>
+                <p><strong>Mode:</strong> <span id="mode">Loading...</span></p>
+                <p><strong>Motion:</strong> <span id="motion">Loading...</span></p>
+                <p><strong>Class:</strong> <span id="class_name">Loading...</span></p>
+                <p><strong>Confidence:</strong> <span id="confidence">Loading...</span></p>
+                <p><strong>Message:</strong> <span id="message">Loading...</span></p>
+                <p><strong>Guide:</strong> <span id="guide">Loading...</span></p>
+                <p><strong>Temperature:</strong> <span id="temperature">Loading...</span></p>
+                <p><strong>Humidity:</strong> <span id="humidity">Loading...</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        async function updateResult() {
+            try {
+                const response = await fetch("/result");
+                const data = await response.json();
+
+                document.getElementById("mode").textContent = data.mode;
+                document.getElementById("motion").textContent = data.motion;
+                document.getElementById("class_name").textContent = data.class_name;
+                document.getElementById("confidence").textContent = data.confidence;
+                document.getElementById("message").textContent = data.message;
+                document.getElementById("guide").textContent = data.guide;
+
+                document.getElementById("temperature").textContent =
+                    data.temperature === null ? "N/A" : data.temperature + " °C";
+
+                document.getElementById("humidity").textContent =
+                    data.humidity === null ? "N/A" : data.humidity + " %";
+            } catch (error) {
+                console.error("Failed to update result:", error);
+            }
+        }
+
+        setInterval(updateResult, 1000);
+        updateResult();
+    </script>
+</body>
+</html>
