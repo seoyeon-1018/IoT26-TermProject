@@ -265,26 +265,7 @@ I was responsible for Raspberry Pi sensor wiring, main application development, 
 
 ---
 
-## 17. Repository Status
-
-This repository is prepared for project documentation and presentation.
-
-The Raspberry Pi source code and trained model file can be updated later when the Raspberry Pi device is available.
-
-### Planned Upload Files
-
-| File                   | Status                                |
-| ---------------------- | ------------------------------------- |
-| `README.md`            | Uploaded                              |
-| `app.py`               | To be uploaded                        |
-| `best.pt`              | To be uploaded or provided separately |
-| `requirements.txt`     | To be uploaded                        |
-| `templates/index.html` | To be uploaded                        |
-| Demo images            | To be uploaded                        |
-
----
-
-## 18. Conclusion
+## 17. Conclusion
 
 This project demonstrates a working AIoT smart recycling prototype.
 
