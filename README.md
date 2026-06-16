@@ -260,7 +260,7 @@ I was responsible for Raspberry Pi sensor wiring, main application development, 
 | Member   | Role                                                               |
 | -------- | ------------------------------------------------------------------ |
 | 김서연     | Raspberry Pi sensor wiring, `app.py` development, YOLO fine-tuning |
-| 장원준 |                           |
+| 장원준     | hardware construction using connected sensors, report writing |
 
 
 ---
