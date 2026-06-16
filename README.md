@@ -239,23 +239,7 @@ The system integrates motion detection, camera streaming, YOLO-based waste detec
 
 ---
 
-## 15. My Contribution
-
-I was responsible for Raspberry Pi sensor wiring, main application development, and YOLO fine-tuning.
-
-### Main Contributions
-
-* Connected sensors and modules to Raspberry Pi
-* Tested PIR sensor, DHT11 sensor, LCD, and camera
-* Developed the main `app.py` code
-* Integrated Flask, Picamera2, YOLO, PIR, DHT11, and LCD
-* Fine-tuned the YOLO model using a waste detection dataset
-* Applied the trained `best.pt` model to Raspberry Pi
-* Debugged sensor, camera, and Flask issues
-
----
-
-## 16. Team Roles
+## 15. Team Roles
 
 | Member   | Role                                                               |
 | -------- | ------------------------------------------------------------------ |
@@ -265,7 +249,7 @@ I was responsible for Raspberry Pi sensor wiring, main application development, 
 
 ---
 
-## 17. Conclusion
+## 16. Conclusion
 
 This project demonstrates a working AIoT smart recycling prototype.
 
